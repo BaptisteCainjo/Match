@@ -1,0 +1,6 @@
+ ├─ modules/
+ │   ├─ artists/
+ │   │    ├─ artists.controller.ts
+ │   │    ├─ artists.service.ts
+ │   │    └─ dto/
+ │   └─ users/  (si tu veux gérer utilisateurs)
