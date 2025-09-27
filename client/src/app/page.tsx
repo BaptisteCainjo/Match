@@ -25,7 +25,7 @@ export default function Home() {
           onChange={(e) => setValue(e.target.value)}
         />
         <button type="submit" className="bg-blue-500 text-white rounded-md p-2">
-          Submitt
+          Submit
         </button>
       </label>
     </form>

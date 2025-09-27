@@ -1,0 +1,13 @@
+client/
+node_modules
+.git
+.DS_Store
+README.md
+DEPLOYMENT.md
+CLAUDE.md
+start.sh
+server/node_modules
+server/dist
+server/.env
+server/coverage
+server/.eslintcache

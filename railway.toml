@@ -1,16 +1,7 @@
 [build]
 builder = "nixpacks"
+buildCommand = "cd server && npm ci && npm run build"
 
 [deploy]
-startCommand = "npm run start:prod"
+startCommand = "cd server && npm run start:prod"
 restartPolicyType = "always"
-
-[[services]]
-name = "backend"
-source = "server"
-
-[services.build]
-buildCommand = "npm run build"
-
-[services.deploy]
-startCommand = "npm run start:prod"
