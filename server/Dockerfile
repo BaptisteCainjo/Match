@@ -7,14 +7,17 @@ WORKDIR /app
 # Copie les fichiers package
 COPY package*.json ./
 
-# Installe les dépendances
-RUN npm ci --only=production && npm cache clean --force
+# Installe TOUTES les dépendances (dev + prod pour le build)
+RUN npm ci && npm cache clean --force
 
 # Copie le code source
 COPY . .
 
-# Build l'application
+# Build l'application (nécessite les devDependencies)
 RUN npm run build
+
+# Supprime les devDependencies après le build pour réduire la taille
+RUN npm prune --production
 
 # Expose le port
 EXPOSE $PORT
