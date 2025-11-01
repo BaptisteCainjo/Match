@@ -6,7 +6,7 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
   app.enableCors({
-    origin: ['https://match-three-steel.vercel.app/'],
+    origin: ['https://match-three-steel.vercel.app'],
     credentials: true,
   });
 
